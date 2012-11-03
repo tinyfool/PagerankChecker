@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD4058B01640031300DCB2AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4058AF1640031300DCB2AD /* Cocoa.framework */; };
+		BD4058BA1640031300DCB2AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD4058B81640031300DCB2AD /* InfoPlist.strings */; };
+		BD4058BC1640031300DCB2AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4058BB1640031300DCB2AD /* main.m */; };
+		BD4058C01640031300DCB2AD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BD4058BE1640031300DCB2AD /* Credits.rtf */; };
+		BD4058C31640031300DCB2AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4058C21640031300DCB2AD /* AppDelegate.m */; };
+		BD4058C61640031300DCB2AD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD4058C41640031300DCB2AD /* MainMenu.xib */; };
+		BD4058CE1640031300DCB2AD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4058CD1640031300DCB2AD /* SenTestingKit.framework */; };
+		BD4058CF1640031300DCB2AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4058AF1640031300DCB2AD /* Cocoa.framework */; };
+		BD4058D71640031300DCB2AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD4058D51640031300DCB2AD /* InfoPlist.strings */; };
+		BD4058DA1640031300DCB2AD /* Pagerank_CheckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4058D91640031300DCB2AD /* Pagerank_CheckerTests.m */; };
+		BD4058F11640065300DCB2AD /* urllist.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4058EF1640065300DCB2AD /* urllist.png */; };
+		BD4058F21640065300DCB2AD /* xml-sitemap.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4058F01640065300DCB2AD /* xml-sitemap.png */; };
+		BD4058F4164008F400DCB2AD /* sync.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4058F3164008F400DCB2AD /* sync.png */; };
+		BD7D40E71642E2AA00EAD631 /* urllist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD7D40E51642E2AA00EAD631 /* urllist.xcdatamodeld */; };
+		BD7D40EB1642EAA200EAD631 /* Url.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7D40EA1642EAA200EAD631 /* Url.m */; };
+		BDAF8B09164400A8000E15FE /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B08164400A8000E15FE /* Delete.png */; };
+		BDAF8B0C1644B5C8000E15FE /* urltextarea.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B0B1644B5C8000E15FE /* urltextarea.png */; };
+		BDAF8B0F1644CEE6000E15FE /* PageRank.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAF8B0E1644CEE6000E15FE /* PageRank.m */; };
+		BDAF8B121644CFA5000E15FE /* php in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B111644CFA5000E15FE /* php */; };
+		BDAF8B15164511DE000E15FE /* check.php in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B13164511DE000E15FE /* check.php */; };
+		BDAF8B16164511DE000E15FE /* pagerank.class.php in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B14164511DE000E15FE /* pagerank.class.php */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD4058D01640031300DCB2AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD4058A21640031200DCB2AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD4058AA1640031300DCB2AD;
+			remoteInfo = "Pagerank Checker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD4058AB1640031300DCB2AD /* Pagerank Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pagerank Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4058AF1640031300DCB2AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BD4058B21640031300DCB2AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BD4058B31640031300DCB2AD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BD4058B41640031300DCB2AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BD4058B71640031300DCB2AD /* Pagerank Checker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pagerank Checker-Info.plist"; sourceTree = "<group>"; };
+		BD4058B91640031300DCB2AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD4058BB1640031300DCB2AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD4058BD1640031300DCB2AD /* Pagerank Checker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pagerank Checker-Prefix.pch"; sourceTree = "<group>"; };
+		BD4058BF1640031300DCB2AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		BD4058C11640031300DCB2AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BD4058C21640031300DCB2AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BD4058C51640031300DCB2AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BD4058CC1640031300DCB2AD /* Pagerank CheckerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pagerank CheckerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4058CD1640031300DCB2AD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		BD4058D41640031300DCB2AD /* Pagerank CheckerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pagerank CheckerTests-Info.plist"; sourceTree = "<group>"; };
+		BD4058D61640031300DCB2AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD4058D81640031300DCB2AD /* Pagerank_CheckerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pagerank_CheckerTests.h; sourceTree = "<group>"; };
+		BD4058D91640031300DCB2AD /* Pagerank_CheckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pagerank_CheckerTests.m; sourceTree = "<group>"; };
+		BD4058EF1640065300DCB2AD /* urllist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = urllist.png; sourceTree = "<group>"; };
+		BD4058F01640065300DCB2AD /* xml-sitemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xml-sitemap.png"; sourceTree = "<group>"; };
+		BD4058F3164008F400DCB2AD /* sync.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sync.png; path = ../../../Downloads/sync.png; sourceTree = "<group>"; };
+		BD7D40E61642E2AA00EAD631 /* urllist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = urllist.xcdatamodel; sourceTree = "<group>"; };
+		BD7D40E91642EAA200EAD631 /* Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Url.h; sourceTree = "<group>"; };
+		BD7D40EA1642EAA200EAD631 /* Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Url.m; sourceTree = "<group>"; };
+		BDAF8B08164400A8000E15FE /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		BDAF8B0B1644B5C8000E15FE /* urltextarea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = urltextarea.png; sourceTree = "<group>"; };
+		BDAF8B0D1644CEE6000E15FE /* PageRank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageRank.h; sourceTree = "<group>"; };
+		BDAF8B0E1644CEE6000E15FE /* PageRank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageRank.m; sourceTree = "<group>"; };
+		BDAF8B111644CFA5000E15FE /* php */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = php; sourceTree = "<group>"; };
+		BDAF8B13164511DE000E15FE /* check.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = check.php; sourceTree = "<group>"; };
+		BDAF8B14164511DE000E15FE /* pagerank.class.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = pagerank.class.php; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD4058A81640031300DCB2AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4058B01640031300DCB2AD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD4058C81640031300DCB2AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4058CE1640031300DCB2AD /* SenTestingKit.framework in Frameworks */,
+				BD4058CF1640031300DCB2AD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD4058A01640031200DCB2AD = {
+			isa = PBXGroup;
+			children = (
+				BD4058B51640031300DCB2AD /* Pagerank Checker */,
+				BD4058D21640031300DCB2AD /* Pagerank CheckerTests */,
+				BD4058AE1640031300DCB2AD /* Frameworks */,
+				BD4058AC1640031300DCB2AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD4058AC1640031300DCB2AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD4058AB1640031300DCB2AD /* Pagerank Checker.app */,
+				BD4058CC1640031300DCB2AD /* Pagerank CheckerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD4058AE1640031300DCB2AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD4058AF1640031300DCB2AD /* Cocoa.framework */,
+				BD4058CD1640031300DCB2AD /* SenTestingKit.framework */,
+				BD4058B11640031300DCB2AD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD4058B11640031300DCB2AD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD4058B21640031300DCB2AD /* AppKit.framework */,
+				BD4058B31640031300DCB2AD /* CoreData.framework */,
+				BD4058B41640031300DCB2AD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BD4058B51640031300DCB2AD /* Pagerank Checker */ = {
+			isa = PBXGroup;
+			children = (
+				BD4058C11640031300DCB2AD /* AppDelegate.h */,
+				BD4058C21640031300DCB2AD /* AppDelegate.m */,
+				BDAF8B0D1644CEE6000E15FE /* PageRank.h */,
+				BDAF8B0E1644CEE6000E15FE /* PageRank.m */,
+				BD7D40E51642E2AA00EAD631 /* urllist.xcdatamodeld */,
+				BD7D40E91642EAA200EAD631 /* Url.h */,
+				BD7D40EA1642EAA200EAD631 /* Url.m */,
+				BD4058C41640031300DCB2AD /* MainMenu.xib */,
+				BD4058B61640031300DCB2AD /* Supporting Files */,
+			);
+			path = "Pagerank Checker";
+			sourceTree = "<group>";
+		};
+		BD4058B61640031300DCB2AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDAF8B101644CF96000E15FE /* php */,
+				BD4058E3164004C900DCB2AD /* images */,
+				BD4058B71640031300DCB2AD /* Pagerank Checker-Info.plist */,
+				BD4058B81640031300DCB2AD /* InfoPlist.strings */,
+				BD4058BB1640031300DCB2AD /* main.m */,
+				BD4058BD1640031300DCB2AD /* Pagerank Checker-Prefix.pch */,
+				BD4058BE1640031300DCB2AD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD4058D21640031300DCB2AD /* Pagerank CheckerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD4058D81640031300DCB2AD /* Pagerank_CheckerTests.h */,
+				BD4058D91640031300DCB2AD /* Pagerank_CheckerTests.m */,
+				BD4058D31640031300DCB2AD /* Supporting Files */,
+			);
+			path = "Pagerank CheckerTests";
+			sourceTree = "<group>";
+		};
+		BD4058D31640031300DCB2AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD4058D41640031300DCB2AD /* Pagerank CheckerTests-Info.plist */,
+				BD4058D51640031300DCB2AD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD4058E3164004C900DCB2AD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BDAF8B0B1644B5C8000E15FE /* urltextarea.png */,
+				BDAF8B08164400A8000E15FE /* Delete.png */,
+				BD4058F3164008F400DCB2AD /* sync.png */,
+				BD4058EF1640065300DCB2AD /* urllist.png */,
+				BD4058F01640065300DCB2AD /* xml-sitemap.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		BDAF8B101644CF96000E15FE /* php */ = {
+			isa = PBXGroup;
+			children = (
+				BDAF8B13164511DE000E15FE /* check.php */,
+				BDAF8B14164511DE000E15FE /* pagerank.class.php */,
+				BDAF8B111644CFA5000E15FE /* php */,
+			);
+			name = php;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD4058AA1640031300DCB2AD /* Pagerank Checker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD4058DD1640031300DCB2AD /* Build configuration list for PBXNativeTarget "Pagerank Checker" */;
+			buildPhases = (
+				BD4058A71640031300DCB2AD /* Sources */,
+				BD4058A81640031300DCB2AD /* Frameworks */,
+				BD4058A91640031300DCB2AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pagerank Checker";
+			productName = "Pagerank Checker";
+			productReference = BD4058AB1640031300DCB2AD /* Pagerank Checker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD4058CB1640031300DCB2AD /* Pagerank CheckerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD4058E01640031300DCB2AD /* Build configuration list for PBXNativeTarget "Pagerank CheckerTests" */;
+			buildPhases = (
+				BD4058C71640031300DCB2AD /* Sources */,
+				BD4058C81640031300DCB2AD /* Frameworks */,
+				BD4058C91640031300DCB2AD /* Resources */,
+				BD4058CA1640031300DCB2AD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD4058D11640031300DCB2AD /* PBXTargetDependency */,
+			);
+			name = "Pagerank CheckerTests";
+			productName = "Pagerank CheckerTests";
+			productReference = BD4058CC1640031300DCB2AD /* Pagerank CheckerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD4058A21640031200DCB2AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "pei hao";
+			};
+			buildConfigurationList = BD4058A51640031200DCB2AD /* Build configuration list for PBXProject "Pagerank Checker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BD4058A01640031200DCB2AD;
+			productRefGroup = BD4058AC1640031300DCB2AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD4058AA1640031300DCB2AD /* Pagerank Checker */,
+				BD4058CB1640031300DCB2AD /* Pagerank CheckerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD4058A91640031300DCB2AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4058BA1640031300DCB2AD /* InfoPlist.strings in Resources */,
+				BD4058C01640031300DCB2AD /* Credits.rtf in Resources */,
+				BD4058C61640031300DCB2AD /* MainMenu.xib in Resources */,
+				BD4058F11640065300DCB2AD /* urllist.png in Resources */,
+				BD4058F21640065300DCB2AD /* xml-sitemap.png in Resources */,
+				BD4058F4164008F400DCB2AD /* sync.png in Resources */,
+				BDAF8B09164400A8000E15FE /* Delete.png in Resources */,
+				BDAF8B0C1644B5C8000E15FE /* urltextarea.png in Resources */,
+				BDAF8B121644CFA5000E15FE /* php in Resources */,
+				BDAF8B15164511DE000E15FE /* check.php in Resources */,
+				BDAF8B16164511DE000E15FE /* pagerank.class.php in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD4058C91640031300DCB2AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4058D71640031300DCB2AD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD4058CA1640031300DCB2AD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD4058A71640031300DCB2AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4058BC1640031300DCB2AD /* main.m in Sources */,
+				BD4058C31640031300DCB2AD /* AppDelegate.m in Sources */,
+				BD7D40E71642E2AA00EAD631 /* urllist.xcdatamodeld in Sources */,
+				BD7D40EB1642EAA200EAD631 /* Url.m in Sources */,
+				BDAF8B0F1644CEE6000E15FE /* PageRank.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD4058C71640031300DCB2AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4058DA1640031300DCB2AD /* Pagerank_CheckerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD4058D11640031300DCB2AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD4058AA1640031300DCB2AD /* Pagerank Checker */;
+			targetProxy = BD4058D01640031300DCB2AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD4058B81640031300DCB2AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD4058B91640031300DCB2AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD4058BE1640031300DCB2AD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD4058BF1640031300DCB2AD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BD4058C41640031300DCB2AD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD4058C51640031300DCB2AD /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BD4058D51640031300DCB2AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD4058D61640031300DCB2AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD4058DB1640031300DCB2AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BD4058DC1640031300DCB2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BD4058DE1640031300DCB2AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pagerank Checker/Pagerank Checker-Prefix.pch";
+				INFOPLIST_FILE = "Pagerank Checker/Pagerank Checker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BD4058DF1640031300DCB2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pagerank Checker/Pagerank Checker-Prefix.pch";
+				INFOPLIST_FILE = "Pagerank Checker/Pagerank Checker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BD4058E11640031300DCB2AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pagerank Checker.app/Contents/MacOS/Pagerank Checker";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pagerank Checker/Pagerank Checker-Prefix.pch";
+				INFOPLIST_FILE = "Pagerank CheckerTests/Pagerank CheckerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		BD4058E21640031300DCB2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pagerank Checker.app/Contents/MacOS/Pagerank Checker";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pagerank Checker/Pagerank Checker-Prefix.pch";
+				INFOPLIST_FILE = "Pagerank CheckerTests/Pagerank CheckerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD4058A51640031200DCB2AD /* Build configuration list for PBXProject "Pagerank Checker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4058DB1640031300DCB2AD /* Debug */,
+				BD4058DC1640031300DCB2AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD4058DD1640031300DCB2AD /* Build configuration list for PBXNativeTarget "Pagerank Checker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4058DE1640031300DCB2AD /* Debug */,
+				BD4058DF1640031300DCB2AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD4058E01640031300DCB2AD /* Build configuration list for PBXNativeTarget "Pagerank CheckerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4058E11640031300DCB2AD /* Debug */,
+				BD4058E21640031300DCB2AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD7D40E51642E2AA00EAD631 /* urllist.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD7D40E61642E2AA00EAD631 /* urllist.xcdatamodel */,
+			);
+			currentVersion = BD7D40E61642E2AA00EAD631 /* urllist.xcdatamodel */;
+			path = urllist.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BD4058A21640031200DCB2AD /* Project object */;
+}
