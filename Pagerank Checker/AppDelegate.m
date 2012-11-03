@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import <CoreData/CoreData.h>
-#import "Url.h"
 #import "PageRank.h"
 
 @implementation AppDelegate
@@ -22,7 +21,59 @@
 
     [self reloadData];
     [self.urlTable reloadData];
-    //[self checkPagerank:@"http://tiny4cocoa.com/home/"];
+    [self performSelectorInBackground:@selector(checking:) withObject:nil];
+}
+
+-(Url*)oneUrlNeedtoGet:(id)sender {
+
+    __block NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity =
+    [NSEntityDescription entityForName:@"Url"
+                inManagedObjectContext:[self managedObjectContext]];
+    [request setEntity:entity];
+    
+    NSPredicate *predicate =
+    [NSPredicate predicateWithFormat:@"pagerank < 0",-1];
+    [request setPredicate:predicate];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+                                        initWithKey:@"address" ascending:YES];
+    [request setSortDescriptors:@[sortDescriptor]];
+    
+    __block NSArray* ret;
+    ret = [[self managedObjectContext] executeFetchRequest:request error:nil];
+    if ([ret count]>0) {
+        
+        Url* url = [ret objectAtIndex:0];
+        NSLog(@"%@",url);
+        return url;
+    }
+    return nil;
+}
+
+
+-(int)progress {
+
+    return 100;
+}
+
+-(IBAction)checking:(id)sender {
+
+    while (1) {
+        
+        
+        Url* url= [self oneUrlNeedtoGet:nil];
+        if (url) {
+            int pagerank = [self checkPagerank:url.address];
+            if (pagerank>=0) {
+                url.pagerank = [NSNumber numberWithInt:pagerank];
+                [[self managedObjectContext] save:nil];
+                [self reloadData];
+                [self.urlTable reloadData];
+            }
+        }
+        [NSThread sleepForTimeInterval:3];
+    }
 }
 
 -(int)checkPagerank:(NSString*)url {
@@ -30,6 +81,7 @@
     PageRank* pagerank = [[PageRank alloc] init];
     return [pagerank getPagerank:url];
 }
+
 
 - (NSURL *)applicationFilesDirectory
 {
@@ -131,7 +183,7 @@
     
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
-                                        initWithKey:@"address" ascending:YES];
+                                        initWithKey:@"pagerank" ascending:NO];
     [request setSortDescriptors:@[sortDescriptor]];
     
     NSError *error;
@@ -180,7 +232,7 @@
     
     Url *entity = [NSEntityDescription insertNewObjectForEntityForName:@"Url" inManagedObjectContext:[self managedObjectContext]];
     entity.address = url;
-    entity.pagrank = [NSNumber numberWithInt:-1];
+    entity.pagerank = [NSNumber numberWithInt:-1];
 }
 
 -(void)addSomeUrls:(NSString*)urls {
@@ -343,7 +395,7 @@
     }else if ([[aTableColumn identifier] isEqualToString:@"1"]) {
         return [url title];
     }else if ([[aTableColumn identifier] isEqualToString:@"2"]) {
-        return [url pagrank];
+        return [url pagerank];
     }
     return nil;
 }

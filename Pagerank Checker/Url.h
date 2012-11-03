@@ -13,7 +13,7 @@
 @interface Url : NSManagedObject
 
 @property (nonatomic, retain) NSString * address;
-@property (nonatomic, retain) NSNumber * pagrank;
+@property (nonatomic, retain) NSNumber * pagerank;
 @property (nonatomic, retain) NSString * title;
 
 @end

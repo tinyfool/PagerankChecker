@@ -12,7 +12,7 @@
 @implementation Url
 
 @dynamic address;
-@dynamic pagrank;
+@dynamic pagerank;
 @dynamic title;
 
 @end

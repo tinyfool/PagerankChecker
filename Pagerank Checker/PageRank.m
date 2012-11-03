@@ -21,9 +21,10 @@
     NSString* retStr = [NSString stringWithContentsOfURL:[NSURL URLWithString:queryUrl]
                                             usedEncoding:&enc
                                                    error:nil];
+    NSLog(@"%@:%d",retStr,retStr.length);
     NSArray* ret = [retStr componentsSeparatedByString:@":"];
     if ([ret count]!=3) {
-        return 0;
+        return -1;
     }
     return [[ret objectAtIndex:2] intValue];
 }

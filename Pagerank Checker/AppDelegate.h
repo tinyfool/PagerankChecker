@@ -7,12 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Url.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate,NSTextFieldDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTableView *urlTable;
 @property (weak) IBOutlet NSTextField *urlInput;
+@property (weak) IBOutlet NSProgressIndicator *progressBar;
 
 @property (retain,nonatomic) NSArray* urlist;
 
@@ -33,4 +35,8 @@
 -(void)reloadData;
 -(BOOL)findUrl:(NSString*)url;
 -(int)checkPagerank:(NSString*)url;
+-(IBAction)checking:(id)sender;
+
+-(Url*)oneUrlNeedtoGet:(id)sender;
+-(int)progress;
 @end
