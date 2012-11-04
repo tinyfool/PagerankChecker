@@ -7,7 +7,7 @@
 //
 
 #import "PageRank.h"
-
+#import "NSString+UrlEncode.h"
 @implementation PageRank
 
 
@@ -21,7 +21,11 @@
     NSString* retStr = [NSString stringWithContentsOfURL:[NSURL URLWithString:queryUrl]
                                             usedEncoding:&enc
                                                    error:nil];
+    NSLog(@"%@",queryUrl);
     NSLog(@"%@:%d",retStr,retStr.length);
+    if (retStr.length==0) {
+        return -2;
+    }
     NSArray* ret = [retStr componentsSeparatedByString:@":"];
     if ([ret count]!=3) {
         return -1;
@@ -33,7 +37,7 @@
     
     long int32unit = 4294967296; // 2^32
     NSUInteger length = str.length;
-    const char* buffer = [str cStringUsingEncoding:NSASCIIStringEncoding];
+    const char* buffer = [str cStringUsingEncoding:NSUTF8StringEncoding];
     for (int i = 0; i < length; i++) {
         
         check *= magic;

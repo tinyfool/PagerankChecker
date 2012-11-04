@@ -33,7 +33,7 @@
     [request setEntity:entity];
     
     NSPredicate *predicate =
-    [NSPredicate predicateWithFormat:@"pagerank < 0",-1];
+    [NSPredicate predicateWithFormat:@"pagerank == -1",-1];
     [request setPredicate:predicate];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
@@ -45,7 +45,6 @@
     if ([ret count]>0) {
         
         Url* url = [ret objectAtIndex:0];
-        NSLog(@"%@",url);
         return url;
     }
     return nil;
@@ -65,14 +64,15 @@
         Url* url= [self oneUrlNeedtoGet:nil];
         if (url) {
             int pagerank = [self checkPagerank:url.address];
-            if (pagerank>=0) {
+            if (pagerank!=-1) {
                 url.pagerank = [NSNumber numberWithInt:pagerank];
                 [[self managedObjectContext] save:nil];
                 [self reloadData];
                 [self.urlTable reloadData];
             }
         }
-        [NSThread sleepForTimeInterval:3];
+        else
+            [NSThread sleepForTimeInterval:1];
     }
 }
 
@@ -184,7 +184,10 @@
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
                                         initWithKey:@"pagerank" ascending:NO];
-    [request setSortDescriptors:@[sortDescriptor]];
+    NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc]
+                                        initWithKey:@"address" ascending:YES];
+
+    [request setSortDescriptors:@[sortDescriptor,sortDescriptor2]];
     
     NSError *error;
     urlist = [[self managedObjectContext] executeFetchRequest:request error:&error];

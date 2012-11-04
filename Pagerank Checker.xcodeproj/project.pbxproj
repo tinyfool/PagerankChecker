@@ -22,6 +22,7 @@
 		BD7D40E71642E2AA00EAD631 /* urllist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD7D40E51642E2AA00EAD631 /* urllist.xcdatamodeld */; };
 		BD7D40EB1642EAA200EAD631 /* Url.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7D40EA1642EAA200EAD631 /* Url.m */; };
 		BDA6691B1645533E00825A62 /* sync.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA6691A1645533E00825A62 /* sync.png */; };
+		BDA6691E1645614B00825A62 /* NSString+UrlEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6691D1645614B00825A62 /* NSString+UrlEncode.m */; };
 		BDAF8B09164400A8000E15FE /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B08164400A8000E15FE /* Delete.png */; };
 		BDAF8B0C1644B5C8000E15FE /* urltextarea.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B0B1644B5C8000E15FE /* urltextarea.png */; };
 		BDAF8B0F1644CEE6000E15FE /* PageRank.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAF8B0E1644CEE6000E15FE /* PageRank.m */; };
@@ -66,6 +67,8 @@
 		BD7D40E91642EAA200EAD631 /* Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Url.h; sourceTree = "<group>"; };
 		BD7D40EA1642EAA200EAD631 /* Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Url.m; sourceTree = "<group>"; };
 		BDA6691A1645533E00825A62 /* sync.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sync.png; sourceTree = "<group>"; };
+		BDA6691C1645614B00825A62 /* NSString+UrlEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UrlEncode.h"; sourceTree = "<group>"; };
+		BDA6691D1645614B00825A62 /* NSString+UrlEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UrlEncode.m"; sourceTree = "<group>"; };
 		BDAF8B08164400A8000E15FE /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
 		BDAF8B0B1644B5C8000E15FE /* urltextarea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = urltextarea.png; sourceTree = "<group>"; };
 		BDAF8B0D1644CEE6000E15FE /* PageRank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageRank.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 		BD4058B51640031300DCB2AD /* Pagerank Checker */ = {
 			isa = PBXGroup;
 			children = (
+				BDA6691C1645614B00825A62 /* NSString+UrlEncode.h */,
+				BDA6691D1645614B00825A62 /* NSString+UrlEncode.m */,
 				BD4058C11640031300DCB2AD /* AppDelegate.h */,
 				BD4058C21640031300DCB2AD /* AppDelegate.m */,
 				BDAF8B0D1644CEE6000E15FE /* PageRank.h */,
@@ -327,6 +332,7 @@
 				BD7D40E71642E2AA00EAD631 /* urllist.xcdatamodeld in Sources */,
 				BD7D40EB1642EAA200EAD631 /* Url.m in Sources */,
 				BDAF8B0F1644CEE6000E15FE /* PageRank.m in Sources */,
+				BDA6691E1645614B00825A62 /* NSString+UrlEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
