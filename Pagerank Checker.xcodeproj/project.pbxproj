@@ -141,12 +141,12 @@
 		BD4058B51640031300DCB2AD /* Pagerank Checker */ = {
 			isa = PBXGroup;
 			children = (
-				BDA6691C1645614B00825A62 /* NSString+UrlEncode.h */,
-				BDA6691D1645614B00825A62 /* NSString+UrlEncode.m */,
 				BD4058C11640031300DCB2AD /* AppDelegate.h */,
 				BD4058C21640031300DCB2AD /* AppDelegate.m */,
 				BDAF8B0D1644CEE6000E15FE /* PageRank.h */,
 				BDAF8B0E1644CEE6000E15FE /* PageRank.m */,
+				BDA6691C1645614B00825A62 /* NSString+UrlEncode.h */,
+				BDA6691D1645614B00825A62 /* NSString+UrlEncode.m */,
 				BD7D40E51642E2AA00EAD631 /* urllist.xcdatamodeld */,
 				BD7D40E91642EAA200EAD631 /* Url.h */,
 				BD7D40EA1642EAA200EAD631 /* Url.m */,

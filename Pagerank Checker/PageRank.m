@@ -22,7 +22,7 @@
                                             usedEncoding:&enc
                                                    error:nil];
     NSLog(@"%@",queryUrl);
-    NSLog(@"%@:%d",retStr,retStr.length);
+    NSLog(@"%@:%ld",retStr,retStr.length);
     if (retStr.length==0) {
         return -2;
     }
