@@ -27,9 +27,6 @@
 		BDAF8B09164400A8000E15FE /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B08164400A8000E15FE /* Delete.png */; };
 		BDAF8B0C1644B5C8000E15FE /* urltextarea.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B0B1644B5C8000E15FE /* urltextarea.png */; };
 		BDAF8B0F1644CEE6000E15FE /* PageRank.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAF8B0E1644CEE6000E15FE /* PageRank.m */; };
-		BDAF8B121644CFA5000E15FE /* php in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B111644CFA5000E15FE /* php */; };
-		BDAF8B15164511DE000E15FE /* check.php in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B13164511DE000E15FE /* check.php */; };
-		BDAF8B16164511DE000E15FE /* pagerank.class.php in Resources */ = {isa = PBXBuildFile; fileRef = BDAF8B14164511DE000E15FE /* pagerank.class.php */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +73,6 @@
 		BDAF8B0B1644B5C8000E15FE /* urltextarea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = urltextarea.png; sourceTree = "<group>"; };
 		BDAF8B0D1644CEE6000E15FE /* PageRank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageRank.h; sourceTree = "<group>"; };
 		BDAF8B0E1644CEE6000E15FE /* PageRank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageRank.m; sourceTree = "<group>"; };
-		BDAF8B111644CFA5000E15FE /* php */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = php; sourceTree = "<group>"; };
-		BDAF8B13164511DE000E15FE /* check.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = check.php; sourceTree = "<group>"; };
-		BDAF8B14164511DE000E15FE /* pagerank.class.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = pagerank.class.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +158,6 @@
 		BD4058B61640031300DCB2AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BDAF8B101644CF96000E15FE /* php */,
 				BD4058E3164004C900DCB2AD /* images */,
 				BD4058B71640031300DCB2AD /* Pagerank Checker-Info.plist */,
 				BD4058B81640031300DCB2AD /* InfoPlist.strings */,
@@ -204,16 +197,6 @@
 				BD4058F01640065300DCB2AD /* xml-sitemap.png */,
 			);
 			name = images;
-			sourceTree = "<group>";
-		};
-		BDAF8B101644CF96000E15FE /* php */ = {
-			isa = PBXGroup;
-			children = (
-				BDAF8B13164511DE000E15FE /* check.php */,
-				BDAF8B14164511DE000E15FE /* pagerank.class.php */,
-				BDAF8B111644CFA5000E15FE /* php */,
-			);
-			name = php;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,9 +277,6 @@
 				BD4058F21640065300DCB2AD /* xml-sitemap.png in Resources */,
 				BDAF8B09164400A8000E15FE /* Delete.png in Resources */,
 				BDAF8B0C1644B5C8000E15FE /* urltextarea.png in Resources */,
-				BDAF8B121644CFA5000E15FE /* php in Resources */,
-				BDAF8B15164511DE000E15FE /* check.php in Resources */,
-				BDAF8B16164511DE000E15FE /* pagerank.class.php in Resources */,
 				BDA6691B1645533E00825A62 /* sync.png in Resources */,
 				43F25F7C1660BD1300AAE7F5 /* PageRankIcon.icns in Resources */,
 			);
