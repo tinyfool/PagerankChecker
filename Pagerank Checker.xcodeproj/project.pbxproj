@@ -65,6 +65,7 @@
 		BD4058D91640031300DCB2AD /* Pagerank_CheckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pagerank_CheckerTests.m; sourceTree = "<group>"; };
 		BD4058EF1640065300DCB2AD /* urllist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = urllist.png; sourceTree = "<group>"; };
 		BD4058F01640065300DCB2AD /* xml-sitemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xml-sitemap.png"; sourceTree = "<group>"; };
+		BD609C9716610B0C00D1CADF /* Pagerank Checker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Pagerank Checker.entitlements"; sourceTree = "<group>"; };
 		BD7D40E61642E2AA00EAD631 /* urllist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = urllist.xcdatamodel; sourceTree = "<group>"; };
 		BD7D40E91642EAA200EAD631 /* Url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Url.h; sourceTree = "<group>"; };
 		BD7D40EA1642EAA200EAD631 /* Url.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Url.m; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 		BD4058B51640031300DCB2AD /* Pagerank Checker */ = {
 			isa = PBXGroup;
 			children = (
+				BD609C9716610B0C00D1CADF /* Pagerank Checker.entitlements */,
 				BD4058C11640031300DCB2AD /* AppDelegate.h */,
 				BD4058C21640031300DCB2AD /* AppDelegate.m */,
 				BDAF8B0D1644CEE6000E15FE /* PageRank.h */,
@@ -450,7 +452,8 @@
 		BD4058DE1640031300DCB2AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "Pagerank Checker/Pagerank Checker.entitlements";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pagerank Checker/Pagerank Checker-Prefix.pch";
@@ -464,7 +467,8 @@
 		BD4058DF1640031300DCB2AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "Pagerank Checker/Pagerank Checker.entitlements";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pagerank Checker/Pagerank Checker-Prefix.pch";
