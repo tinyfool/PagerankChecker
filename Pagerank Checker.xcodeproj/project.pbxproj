@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43F25F7C1660BD1300AAE7F5 /* PageRankIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 43F25F7B1660BD1300AAE7F5 /* PageRankIcon.icns */; };
 		BD4058B01640031300DCB2AD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4058AF1640031300DCB2AD /* Cocoa.framework */; };
 		BD4058BA1640031300DCB2AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD4058B81640031300DCB2AD /* InfoPlist.strings */; };
 		BD4058BC1640031300DCB2AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4058BB1640031300DCB2AD /* main.m */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43F25F7B1660BD1300AAE7F5 /* PageRankIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PageRankIcon.icns; sourceTree = "<group>"; };
 		BD4058AB1640031300DCB2AD /* Pagerank Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pagerank Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4058AF1640031300DCB2AD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BD4058B21640031300DCB2AD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -102,6 +104,7 @@
 		BD4058A01640031200DCB2AD = {
 			isa = PBXGroup;
 			children = (
+				43F25F7B1660BD1300AAE7F5 /* PageRankIcon.icns */,
 				BD4058B51640031300DCB2AD /* Pagerank Checker */,
 				BD4058D21640031300DCB2AD /* Pagerank CheckerTests */,
 				BD4058AE1640031300DCB2AD /* Frameworks */,
@@ -293,6 +296,7 @@
 				BDAF8B15164511DE000E15FE /* check.php in Resources */,
 				BDAF8B16164511DE000E15FE /* pagerank.class.php in Resources */,
 				BDA6691B1645533E00825A62 /* sync.png in Resources */,
+				43F25F7C1660BD1300AAE7F5 /* PageRankIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
