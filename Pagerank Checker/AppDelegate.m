@@ -15,6 +15,7 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize urlist;
+@synthesize backgroundManagedObjectContext = _backgroundManagedObjectContext;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -41,7 +42,7 @@
     [request setSortDescriptors:@[sortDescriptor]];
     
     __block NSArray* ret;
-    ret = [[self managedObjectContext] executeFetchRequest:request error:nil];
+    ret = [[self backgroundManagedObjectContext] executeFetchRequest:request error:nil];
     if ([ret count]>0) {
         
         Url* url = [ret objectAtIndex:0];
@@ -60,19 +61,25 @@
 
     while (1) {
         
-        
-        Url* url= [self oneUrlNeedtoGet:nil];
-        if (url) {
-            int pagerank = [self checkPagerank:url.address];
-            if (pagerank!=-1) {
-                url.pagerank = [NSNumber numberWithInt:pagerank];
-                [[self managedObjectContext] save:nil];
-                [self reloadData];
-                [self.urlTable reloadData];
+        __weak typeof(self) weakSelf = self;
+        [self.backgroundManagedObjectContext performBlockAndWait:^{
+            Url* url= [weakSelf oneUrlNeedtoGet:nil];
+            if (url) {
+                int pagerank = [weakSelf checkPagerank:url.address];
+                if (pagerank!=-1) {
+                    url.pagerank = [NSNumber numberWithInt:pagerank];
+                    [weakSelf.backgroundManagedObjectContext save:nil];
+                    
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                        [weakSelf reloadData];
+                        [weakSelf.urlTable reloadData];
+                    }];
+                }
             }
-        }
-        else
-            [NSThread sleepForTimeInterval:1];
+            else
+                [NSThread sleepForTimeInterval:1];
+            
+        }];
     }
 }
 
@@ -168,11 +175,25 @@
         [[NSApplication sharedApplication] presentError:error];
         return nil;
     }
-    _managedObjectContext = [[NSManagedObjectContext alloc] init];
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     
     return _managedObjectContext;
 }
+
+- (NSManagedObjectContext *)backgroundManagedObjectContext
+{
+    if (_backgroundManagedObjectContext) {
+        return _backgroundManagedObjectContext;
+    }
+    
+    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    [context setParentContext:self.managedObjectContext];
+    _backgroundManagedObjectContext = context;
+    
+    return _backgroundManagedObjectContext;
+}
+
 
 -(void)reloadData {
 
