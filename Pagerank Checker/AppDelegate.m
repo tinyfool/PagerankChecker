@@ -74,6 +74,7 @@
                         [weakSelf reloadData];
                         [weakSelf.urlTable reloadData];
                     }];
+                    [NSThread sleepForTimeInterval:3];
                 }
             }
             else
