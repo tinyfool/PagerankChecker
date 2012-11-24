@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>PageRankIcon</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.tiny4.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>org.tiny4.mac.pagerankchecker</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
