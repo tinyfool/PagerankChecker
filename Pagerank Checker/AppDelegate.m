@@ -217,20 +217,29 @@
 
 - (IBAction)delUrl:(id)sender {
     
-    NSInteger sel = [self.urlTable selectedRow];
-    if (sel == -1)
+    NSIndexSet* sel = [self.urlTable selectedRowIndexes];
+    if ([sel count] == 0)
         return;
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
     [alert addButtonWithTitle:@"Cancel"];
-    [alert setMessageText:@"Delete this url?"];
+    if ([sel count] ==1) {
+        [alert setMessageText:@"Delete this url?"];
+    }
+    else {
+        [alert setMessageText:@"Delete these urls?"];
+
+    }
     [alert setInformativeText:@"Deleted urls cannot be restored."];
     [alert setAlertStyle:NSWarningAlertStyle];
     if ([alert runModal] == NSAlertFirstButtonReturn) {
         
-        Url* url = [urlist objectAtIndex:sel];
-        [[self managedObjectContext] deleteObject:url];
-        [[self managedObjectContext] save:nil];
+        
+        [sel enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+            Url* url = [urlist objectAtIndex:idx];
+            [[self managedObjectContext] deleteObject:url];
+            [[self managedObjectContext] save:nil];
+        }];
         [self reloadData];
         [self.urlTable reloadData];
     }
