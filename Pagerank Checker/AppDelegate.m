@@ -292,6 +292,56 @@
     
 }
 
+- (IBAction)addUrlsByWildcardString:(id)sender {
+
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"Add"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Add these urls."];
+    [alert setAccessoryView:self.wildcardView];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    if ([alert runModal] != NSAlertFirstButtonReturn)
+        return;
+    
+    int from = self.fromNum.intValue;
+    int to = self.toNum.intValue;
+    if (from>=to) {
+        
+        return;
+    }
+    
+    NSString* pattern = self.urlPattern.stringValue;
+    NSMutableArray* urls = [NSMutableArray arrayWithCapacity:to-from];
+    for (int i = from; i<to+1; i++) {
+        
+        NSString* url = [pattern stringByReplacingOccurrencesOfString:@"*" withString:[NSString stringWithFormat:@"%d",i]];
+        [urls addObject:url];
+    }
+    NSString* urlsStr = [urls componentsJoinedByString:@" "];
+    
+    
+    NSTextField *input = [[NSTextField alloc]
+                          initWithFrame:NSMakeRect(0, 0, 350, 24*6)];
+    
+    input.delegate = self;
+    input.stringValue = urlsStr;
+    alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"Add"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Add these urls."];
+    [alert setAccessoryView:input];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    if ([alert runModal] != NSAlertFirstButtonReturn)
+        return;
+    
+    urlsStr = input.stringValue;
+    [self addSomeUrls:urlsStr];
+    [[self managedObjectContext] save:nil];
+    [self reloadData];
+    [self.urlTable reloadData];
+
+}
+
 - (IBAction)addUrls:(id)sender {
 
     NSTextField *input = [[NSTextField alloc]

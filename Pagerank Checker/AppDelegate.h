@@ -17,12 +17,17 @@
 @property (weak) IBOutlet NSProgressIndicator *progressBar;
 
 @property (retain,nonatomic) NSArray* urlist;
-
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *backgroundManagedObjectContext;
 
+
+
+@property (weak) IBOutlet NSView *wildcardView;
+@property (weak) IBOutlet NSTextField *fromNum;
+@property (weak) IBOutlet NSTextField *toNum;
+@property (weak) IBOutlet NSTextField *urlPattern;
 
 - (IBAction)delUrl:(id)sender;
 - (IBAction)addUrl:(id)sender;
@@ -30,6 +35,7 @@
 - (IBAction)addUrlsFromFile:(id)sender;
 - (IBAction)sync:(id)sender;
 - (IBAction)addUrls:(id)sender;
+- (IBAction)addUrlsByWildcardString:(id)sender;
 
 -(void)addOneUrl:(NSString*)url;
 -(void)addSomeUrls:(NSString*)urls;
